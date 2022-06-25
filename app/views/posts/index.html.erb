@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="row">
+	<div class="col">
+		<table class="table table-bordered">
+			<tr>
+				<th>Title</th>
+				<th>Content</th>
+			</tr>
+		<% @posts.each do |post| %>
+			<tr>
+				<td><%= link_to post.title, ditum_path(post) %></td>
+				<td><%= link_to post.content, ditum_path(post) %></td>
+			</tr>	
+		<% end %>
+		</table>
+		<%= paginate @posts %>
+	</div>
+	</div>
+</div>
